@@ -1,0 +1,15 @@
+.red {
+    height: 789px;
+    background: linear-gradient(#e66465, #9198e5);
+    font-family: 'Lato', sans-serif;
+}
+
+.page {
+    height: 750px;
+    width: 96%;
+    background: linear-gradient(to right, #EDEDED 50%, white 50%);
+    position: absolute;
+    top: 19.5px;
+    left: 28.8px;
+
+}
