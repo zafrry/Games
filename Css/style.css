@@ -62,6 +62,54 @@ button {
     border-radius: 40px;
 }
 
+/* Players */
 
+.players {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 217.5px;
+    margin-left: 217.5px;
+}
+
+/* Canvas */
+
+.canvas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+#count-one, #count-two {
+    margin-top: 25px;
+}
+
+#dice {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 20px grey;
+}
+
+canvas {
+    background-color: #e66465;
+}
+
+/* Points */
+
+.points {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.roll-dice, .hold {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
 
 
