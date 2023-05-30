@@ -18,6 +18,18 @@
         const diceButton = document.getElementById('throw');
         diceButton.addEventListener('click', displayResult);
 
+// Fonction Nouvelle Partie demande de choisir un identifiant
+
+    // Créer des pop pour ecrire un identifiant
+        const definePlayers = () => {
+            window.prompt('click', (e) => {
+                document.getElementById('pop_up').style.display = 'block';
+            }) 
+        };
+
+        const startNewGame =  document.getElementById('nouvelle_partie');
+        startNewGame.addEventListener('click', definePlayers);
+
 
 
 

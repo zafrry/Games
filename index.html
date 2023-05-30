@@ -13,43 +13,57 @@
 
         <div class="page">
 
-            <div class="new-game">
-                <button class="material-symbols-outlined"> add_circle </button>
+            <div class="new_game">
+                <button class="material-symbols-outlined" onclick="startNewGame" id="nouvelle_partie"> add_circle </button>
                 <p>NOUVELLE PARTIE</p>
             </div>
 
-            <div class="players">
-                
-                <div class="player-one">
-                        <input type="text" class="users">  
+            <div id="pop_up">
+                <form>
+                    <div class="player_one">
+                        <label>Veuillez renseigner le joueur 1</label>
+                        <input type="text" id="one">
+                    </div>
+
+                    <div class="player_two"> 
+                        <label>Veuillez renseigner le joueur 2</label>
+                        <input type="text" id="two">               
+                    </div>
+                    <button>Valider</button>
+                </form>
+            </div>
+
+            <div id="players">
+
+                <div id="user_one">
+
                 </div>
 
-                <div class="player-two">
-                        <input type="text" class="users">                      
+                <div id="user_two">
+
                 </div>
 
             </div>
 
             <div class="canvas">
 
-                <canvas id="count-one" width="200" height="200"></canvas>
+                <canvas id="count_one" width="200" height="200"></canvas>
 
                 <div class="dice">
                     <img id="dice" src="/Dés/dé 1.png">
                 </div>
 
-
-                <canvas id="count-two" width="200" height="200"></canvas>
+                <canvas id="count_two" width="200" height="200"></canvas>
 
             </div>
 
             <div class="points">
 
-                <canvas id="current-one" width="150" height="100"></canvas>
+                <canvas id="current_one" width="150" height="100"></canvas>
 
                 <div class="touch">
 
-                    <div class="roll-dice">
+                    <div class="roll_dice">
                         <button id="throw" class="material-symbols-outlined"> casino </button>
                         <p>ROLL DICE</p>
                     </div>
@@ -61,7 +75,7 @@
 
                 </div>
 
-                <canvas id="current-two" width="150" height="100"></canvas>
+                <canvas id="current_two" width="150" height="100"></canvas>
 
             </div>
       

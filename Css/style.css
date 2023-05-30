@@ -44,7 +44,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-.new-game {
+.new_game {
     display: flex;
     justify-content: center;
     padding-top: 60px;
@@ -55,14 +55,15 @@ p {
     padding-left: 10px;
 }
 
+/* Pop-up */
+
+#pop_up {
+    display: none;
+}
+
 /* Players */
 
-.players {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 217.5px;
-    margin-left: 217.5px;
-}
+/* fgdugyjkhgufjfl:hkudjfyfyihldivgdfyhufreiofhjkhezvfurehgfkherzcvirhfgerfcehfkevdfiezhfielzvfeyzgfrfbhkezfgou'hfkerdfieufhbezycfeifkez */ 
 
 /* Canvas */
 
@@ -75,7 +76,7 @@ p {
     margin-left: 200px;
 }
 
-#count-one, #count-two {
+#count_one, #count_two {
     margin-top: 25px;
 }
 
@@ -101,7 +102,7 @@ canvas {
     margin-left: 225px;
 }
 
-.roll-dice, .hold {
+.roll_dice, .hold {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
