@@ -31,10 +31,9 @@
     font-style: normal;
     font-size: 40px;
     color: #e66465;
-    padding: 0;
-    border: 0;
-    padding-right: 5px;
-    padding-top: 3px;
+    height: 40px;
+    padding: 0px;
+    border: 0px;
     line-height: 1;
     letter-spacing: normal;
     text-transform: none;
@@ -42,7 +41,6 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
-    -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
   }
 
@@ -52,14 +50,9 @@
     padding-top: 60px;
 }
 
-.new-game p {
+p {
     font-size: 30px;
     padding-left: 10px;
-}
-
-button {
-    height: 0px;
-    border-radius: 40px;
 }
 
 /* Players */
@@ -86,6 +79,7 @@ button {
     margin-top: 25px;
 }
 
+
 #dice {
     margin-top: 50px;
     margin-bottom: 25px;
@@ -102,14 +96,33 @@ canvas {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    margin-right: 200px;
-    margin-left: 200px;
+    margin-right: 225px;
+    margin-left: 225px;
 }
 
 .roll-dice, .hold {
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
+}
+
+.touch {
+    padding-top: 30px;
+    height: 100px;
+}
+
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v114/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOelbd5zrDAt.woff) format('woff');
+  }
+  
+  @font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v114/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1n-q_4MrImHCIJIZrDCvHOelbd5zrDAt.woff) format('woff');
 }
 
 
