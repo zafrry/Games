@@ -11,12 +11,14 @@
         const displayResult = () => {
             const result = throwDice();
             const image = document.getElementById('dice');
-            image.src = '/Dés/dé ' + result + '.png'
+            image.src = '/Dés/dé ' + result + '.png';
         }; 
 
     // Affecter un évenement lors du click sur le boutton 
         const diceButton = document.getElementById('throw');
         diceButton.addEventListener('click', displayResult);
+
+
 
 
 
