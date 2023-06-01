@@ -20,15 +20,20 @@
 
 // Fonction Nouvelle Partie demande de choisir un identifiant
 
-    // Créer des pop pour ecrire un identifiant
+    // Créer des pop_up pour ecrire un identifiant
+        const modal = document.querySelector('.modal');
         const definePlayers = () => {
-            window.prompt('click', (e) => {
-                document.getElementById('pop_up').style.display = 'block';
-            }) 
+            modal.classList.toggle('active');
         };
+
+        const closePopUp = document.getElementById('closePop');
+
 
         const startNewGame =  document.getElementById('nouvelle_partie');
         startNewGame.addEventListener('click', definePlayers);
+        closePopUp.addEventListener('click', definePlayers);
+
+
 
 
 

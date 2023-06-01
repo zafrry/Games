@@ -57,8 +57,36 @@ p {
 
 /* Pop-up */
 
-#pop_up {
+.modal {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 750px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.276);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+#pop_up {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    height: 380px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#closePop {
+    display: flex;
 }
 
 /* Players */
