@@ -85,8 +85,20 @@ p {
     align-items: center;
 }
 
-#closePop {
+.valider {
     display: flex;
+    margin-left: 200px;
+    background-color: #e66465;
+    color: white;
+    border-color: #e66465;
+    font-size: large;
+}
+
+.player_one, .player_two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 15px;
 }
 
 /* Players */

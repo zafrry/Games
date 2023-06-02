@@ -14,27 +14,25 @@
         <div class="page">
 
             <div class="new_game">
-                <button class="material-symbols-outlined" onclick="startNewGame" id="nouvelle_partie"> add_circle </button>
+                <button class="material-symbols-outlined" onclick="startNewGame()" id="nouvelle_partie"> add_circle </button>
                 <p>NOUVELLE PARTIE</p>
             </div>
 
             <section class="modal">
                 <div id="pop_up">
                     <form>
-                        <p>Veuillez rentrer </p>
+                        <p>Veuillez rentrer les noms des joueurs</p>
                         <div class="player_one">
                             <label>Joueur 1</label>
-                            <br>
                             <input type="text" id="one">
                         </div>
 
                         <div class="player_two"> 
                             <label>Joueur 2</label>
-                            <br>
                             <input type="text" id="two">               
                         </div>
                         <br>
-                        <button id="closePop">Valider</button>
+                        <button onclick="closePop()" class="valider">Valider</button>
                     </form>
                 </div>
             </section>
@@ -42,11 +40,9 @@
             <div id="players">
 
                 <div id="user_one">
-
                 </div>
 
                 <div id="user_two">
-
                 </div>
 
             </div>
@@ -70,7 +66,7 @@
                 <div class="touch">
 
                     <div class="roll_dice">
-                        <button id="throw" class="material-symbols-outlined"> casino </button>
+                        <button id="throw" class="material-symbols-outlined" onclick="displayResult()"> casino </button>
                         <p>ROLL DICE</p>
                     </div>
 
