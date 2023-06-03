@@ -85,7 +85,7 @@ p {
     align-items: center;
 }
 
-.valider {
+#valider {
     display: flex;
     margin-left: 200px;
     background-color: #e66465;

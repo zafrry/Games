@@ -23,17 +23,23 @@
             modal.classList.toggle('active');
         }
 
+    // Validation des identifiants
+        const inputOne = document.getElementById('one');
+        const inputTwo = document.getElementById('two');
+
         const closePop = () => {
-
-
-
-
-
-
-
-            
-            modal.classList.toggle('disactive');
+            if (inputOne.value === '' || inputTwo.value === '') {
+                alert(`Vous n'avez pas saisie le nom des joueurs !`)
+            }
         }
+
+    // Afficher les noms
+        user_one.innerText = inputOne.value
+        user_two.innerText = inputTwo.value
+
+
+
+
 
 
 
