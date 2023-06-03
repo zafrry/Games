@@ -1,46 +1,41 @@
-// Fonction pour Lancer les dés
-
-    // Donner un nombre aléatoir entre 1 et 6
-        const throwDice = () => {
-            let numbersDecimal = (Math.random() * 6) + 1;
-            let numbers = Math.floor(numbersDecimal);
-            return numbers;
-        };
-
-    // Afficher le résultat 
-        const displayResult = () => {
-            const result = throwDice();
-            const image = document.getElementById('dice');
-            image.src = '/Dés/dé ' + result + '.png';
-        }; 
-
 // Definition du tour du joueur
 
     // Déclarer une fonction tour du joueur 
-        const turnOne = document.querySelector('.turn_one');
-        const turnTwo = document.querySelector('.turn_two');
+    const turnOne = document.querySelector('.turn_one');
+    const turnTwo = document.querySelector('.turn_two');
 
-        let playerOne = true;
-        let playerTwo = false;
+    let playerOne = true;
+    let playerTwo = false;
 
-         const turnPlayers = () => {
-           if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
-                playerOne = (turnOne.style.display = "none") && false;
-                playerTwo = (turnTwo.style.display = "inline") && true;
-            } else {
-                playerOne = (turnOne.style.display = "inline") && true;
-                playerTwo = (turnTwo.style.display = "none") && false;
-            }
-         }
+     const turnPlayers = () => {
+       if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
+            playerOne = (turnOne.style.display = "none") && false;
+            playerTwo = (turnTwo.style.display = "inline") && true;
+        } else {
+            playerOne = (turnOne.style.display = "inline") && true;
+            playerTwo = (turnTwo.style.display = "none") && false;
+        }
+     }
 
 // Affecter les points dans la case courant
 
     // Récuperer les points et le stocker
-        const result = throwDice();
-        const currentOne = document.getElementById('current_one');
-        const currentTwo = document.getElementById('current_two');
+    const currentOne = document.getElementById('current_one');
+    const currentTwo = document.getElementById('current_two');
 
+// Fonction pour Lancer les dés
 
+    // Afficher le résultat && S’il obtient un 1, c’est la fin de son tour. A faire son score ROUND est perdu.
+        const displayResult = () => {
+            let numbersDecimal = (Math.random() * 6) + 1;
+            let numbers = Math.floor(numbersDecimal);
+            const result = numbers;
+            const image = document.getElementById('dice');
+            image.src = '/Dés/dé ' + result + '.png';
+            if (result === 1) {
+                turnPlayers();
+            }
+        }; 
 
 // Fonction Nouvelle Partie demande de choisir un identifiant
 
