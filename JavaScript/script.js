@@ -20,8 +20,10 @@
 // Affecter les points dans la case courant
 
     // Récuperer les points et le stocker
-    const currentOne = document.getElementById('current_one');
-    const currentTwo = document.getElementById('current_two');
+    // const currentOne = document.getElementById('current_one');
+    // const currentTwo = document.getElementById('current_two');
+
+    
 
 // Fonction pour Lancer les dés
 
@@ -32,6 +34,12 @@
             const result = numbers;
             const image = document.getElementById('dice');
             image.src = '/Dés/dé ' + result + '.png';
+
+            const currentOne = document.getElementById('current_one');
+            const currentTwo = document.getElementById('current_two');
+            currentOne.innerText = result;
+            currentTwo.innerText = result;
+
             if (result === 1) {
                 turnPlayers();
             }

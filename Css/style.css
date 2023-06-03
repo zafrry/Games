@@ -155,10 +155,28 @@ canvas {
 
 /* Points */
 
-#current_one, #current_two {
+.round {
     background-color: #e66465;
     height: 100px;
     width: 150px;
+}
+
+.courant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+#current_one, #current_two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
 }
 
 .points {
