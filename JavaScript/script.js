@@ -17,15 +17,7 @@
         }
      }
 
-// Affecter les points dans la case courant
-
-    // Récuperer les points et le stocker
-    // const currentOne = document.getElementById('current_one');
-    // const currentTwo = document.getElementById('current_two');
-
-    
-
-// Fonction pour Lancer les dés
+// Fonction pour Lancer les dés et affichet le résultat dans la case Points
 
     // Afficher le résultat && S’il obtient un 1, c’est la fin de son tour. A faire son score ROUND est perdu.
         const displayResult = () => {
@@ -37,9 +29,12 @@
 
             const currentOne = document.getElementById('current_one');
             const currentTwo = document.getElementById('current_two');
-            currentOne.innerText = result;
-            currentTwo.innerText = result;
-
+                if (playerOne === true) {
+                    currentOne.innerText = result;
+                } else {
+                    currentTwo.innerText = result;
+                }
+            
             if (result === 1) {
                 turnPlayers();
             }
