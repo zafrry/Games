@@ -16,19 +16,30 @@
 
 // Definition du tour du joueur
 
-        // Déclarer une fonction tour du joueur 
+    // Déclarer une fonction tour du joueur 
         const turnOne = document.querySelector('.turn_one');
         const turnTwo = document.querySelector('.turn_two');
 
-        const turnPlayers = () => {
-            if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
-                turnOne.style.display = "none";
-                turnTwo.style.display = "inline";
+        let playerOne = true;
+        let playerTwo = false;
+
+         const turnPlayers = () => {
+           if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
+                playerOne = (turnOne.style.display = "none") && false;
+                playerTwo = (turnTwo.style.display = "inline") && true;
             } else {
-                turnOne.style.display = "inline";
-                turnTwo.style.display = "none";
+                playerOne = (turnOne.style.display = "inline") && true;
+                playerTwo = (turnTwo.style.display = "none") && false;
             }
-        }
+         }
+
+// Affecter les points dans la case courant
+
+    // Récuperer les points et le stocker
+        const result = throwDice();
+        const currentOne = document.getElementById('current_one');
+        const currentTwo = document.getElementById('current_two');
+
 
 
 // Fonction Nouvelle Partie demande de choisir un identifiant
