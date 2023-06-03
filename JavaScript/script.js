@@ -4,10 +4,26 @@
     const turnOne = document.querySelector('.turn_one');
     const turnTwo = document.querySelector('.turn_two');
 
+    const globalOne = document.getElementById('global_one');
+    const globalTwo = document.getElementById('global_two');
+
     let playerOne = true;
     let playerTwo = false;
 
+    let playerOneGlobalScore = 0;
+    let playerTwoGlobalScore = 0;
+
      const turnPlayers = () => {
+
+        if (playerOne === true) {
+            playerOneGlobalScore += firstPlayer;
+            globalOne.innerText = playerOneGlobalScore
+        }
+        if (playerTwo === true){
+            playerTwoGlobalScore += secondPlayer;
+            globalTwo.innerText = playerTwoGlobalScore
+        }
+
        if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
             playerOne = (turnOne.style.display = "none") && false;
             playerTwo = (turnTwo.style.display = "inline") && true;
@@ -19,25 +35,35 @@
 
 // Fonction pour Lancer les dés et affichet le résultat dans la case Points
 
+    const currentOne = document.getElementById('current_one');
+    const currentTwo = document.getElementById('current_two');
+
+    let secondPlayer = 0;
+    let firstPlayer = 0;
+
     // Afficher le résultat && S’il obtient un 1, c’est la fin de son tour. A faire son score ROUND est perdu.
         const displayResult = () => {
+
             let numbersDecimal = (Math.random() * 6) + 1;
             let numbers = Math.floor(numbersDecimal);
             const result = numbers;
             const image = document.getElementById('dice');
             image.src = '/Dés/dé ' + result + '.png';
 
-            const currentOne = document.getElementById('current_one');
-            const currentTwo = document.getElementById('current_two');
                 if (playerOne === true) {
-                    currentOne.innerText = result;
+                    secondPlayer = 0;
+                    currentTwo.innerText = secondPlayer;
+                    firstPlayer += result;
+                    currentOne.innerText = firstPlayer;
                 } else {
-                    currentTwo.innerText = result;
-                }
+                    firstPlayer = 0;
+                    currentOne.innerText = firstPlayer;
+                    secondPlayer += result;
+                    currentTwo.innerText = secondPlayer;
+                };
             
             if (result === 1) {
-                turnPlayers();
-            }
+            };
         }; 
 
 // Fonction Nouvelle Partie demande de choisir un identifiant

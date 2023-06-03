@@ -128,7 +128,7 @@ p {
 
 /* Canvas */
 
-.canvas {
+.score {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -137,8 +137,30 @@ p {
     margin-left: 200px;
 }
 
+.global {
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    padding-top: 30px;
+}
+
+#global_one, #global_two {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+    padding-bottom: 30px;
+}
+
 #count_one, #count_two {
     margin-top: 25px;
+    height: 150px;
+    width: 200px;
+    background-color: #9198e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
 }
 
 
@@ -149,16 +171,17 @@ p {
     box-shadow: 0px 0px 20px grey;
 }
 
-canvas {
-    background-color: #e66465;
-}
-
 /* Points */
 
 .round {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #e66465;
     height: 100px;
     width: 150px;
+    border-radius: 20px;
 }
 
 .courant {
