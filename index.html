@@ -39,11 +39,15 @@
 
             <div id="players">
 
-                <div id="user_one">
-                </div>
-
-                <div id="user_two">
-                </div>
+                <span id="user_one"> 
+                    Joueur 1 
+                    <img src="/point.png" class="turn_one">
+                </span>
+                
+                <span id="user_two">
+                    <img src="/point.png" class="turn_two">
+                    Joueur 2
+                </span>
 
             </div>
 
@@ -71,7 +75,7 @@
                     </div>
 
                     <div class="hold">
-                        <button class="material-symbols-outlined"> place_item </button>
+                        <button class="material-symbols-outlined" onclick="turnPlayers()"> place_item </button>
                         <p>HOLD</p>
                     </div>
 

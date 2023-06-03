@@ -14,6 +14,23 @@
             image.src = '/Dés/dé ' + result + '.png';
         }; 
 
+// Definition du tour du joueur
+
+        // Déclarer une fonction tour du joueur 
+        const turnOne = document.querySelector('.turn_one');
+        const turnTwo = document.querySelector('.turn_two');
+
+        const turnPlayers = () => {
+            if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
+                turnOne.style.display = "none";
+                turnTwo.style.display = "inline";
+            } else {
+                turnOne.style.display = "inline";
+                turnTwo.style.display = "none";
+            }
+        }
+
+
 // Fonction Nouvelle Partie demande de choisir un identifiant
 
     // Créer des pop_up pour ecrire un identifiant
@@ -30,13 +47,16 @@
         const closePop = () => {
             if (inputOne.value === '' || inputTwo.value === '') {
                 alert(`Vous n'avez pas saisie le nom des joueurs !`)
-            }
+            }    
         }
 
-    // Afficher les noms
-        user_one.innerText = inputOne.value
-        user_two.innerText = inputTwo.value
+        const btnValider = document.getElementById('valider');
 
+        btnValider.addEventListener('click', () => {
+            user_one.innerText = inputOne.value
+            user_two.innerText = inputTwo.value
+        })
+            
 
 
 
