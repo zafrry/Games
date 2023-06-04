@@ -372,6 +372,18 @@
             flex-direction: column;
             padding-top: 15px;
         }
+
+        .end_game {
+            height: 474px;
+        }
+
+        #end_pop {
+            border-radius: 45px;
+        }
+
+        #end_message {
+            font-size: 20px;
+        }
     }
 
     @media screen and (min-width: 728px) and (max-width: 1024px) {
