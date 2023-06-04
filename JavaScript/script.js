@@ -1,37 +1,41 @@
 // Definition du tour du joueur
 
     // Déclarer une fonction tour du joueur 
-    const turnOne = document.querySelector('.turn_one');
-    const turnTwo = document.querySelector('.turn_two');
+        const turnOne = document.querySelector('.turn_one');
+        const turnTwo = document.querySelector('.turn_two');
 
-    const globalOne = document.getElementById('global_one');
-    const globalTwo = document.getElementById('global_two');
+        const globalOne = document.getElementById('global_one');
+        const globalTwo = document.getElementById('global_two');
 
-    let playerOne = true;
-    let playerTwo = false;
+        let playerOne = true;
+        let playerTwo = false;
 
-    let playerOneGlobalScore = 0;
-    let playerTwoGlobalScore = 0;
+        let playerOneGlobalScore = 0;
+        let playerTwoGlobalScore = 0;
 
-     const turnPlayers = () => {
+        const turnPlayers = () => {
 
-        if (playerOne === true) {
-            playerOneGlobalScore += firstPlayer;
-            globalOne.innerText = playerOneGlobalScore
+            if (playerOne === true) {
+                playerOneGlobalScore += firstPlayer;
+                firstPlayer = 0;
+                currentOne.innerText = firstPlayer;
+                globalOne.innerText = playerOneGlobalScore
+            }
+            if (playerTwo === true){
+                playerTwoGlobalScore += secondPlayer;
+                secondPlayer = 0;
+                currentTwo.innerText = secondPlayer;
+                globalTwo.innerText = playerTwoGlobalScore
+            }
+
+            if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
+                playerOne = (turnOne.style.display = "none") && false;
+                playerTwo = (turnTwo.style.display = "inline") && true;
+            } else {
+                playerOne = (turnOne.style.display = "inline") && true;
+                playerTwo = (turnTwo.style.display = "none") && false;
+            }
         }
-        if (playerTwo === true){
-            playerTwoGlobalScore += secondPlayer;
-            globalTwo.innerText = playerTwoGlobalScore
-        }
-
-       if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
-            playerOne = (turnOne.style.display = "none") && false;
-            playerTwo = (turnTwo.style.display = "inline") && true;
-        } else {
-            playerOne = (turnOne.style.display = "inline") && true;
-            playerTwo = (turnTwo.style.display = "none") && false;
-        }
-     }
 
 // Fonction pour Lancer les dés et affichet le résultat dans la case Points
 
@@ -61,10 +65,23 @@
                     secondPlayer += result;
                     currentTwo.innerText = secondPlayer;
                 };
-            
-            if (result === 1) {
-            };
+
+                if (result === 1) {
+                    if (getComputedStyle(turnOne).display != "none" && getComputedStyle(turnTwo).display == "none") {
+                        playerOne = (turnOne.style.display = "none") && false;
+                        firstPlayer = 0;
+                        currentOne.innerText = firstPlayer;
+                        playerTwo = (turnTwo.style.display = "inline") && true;
+                    } else {
+                        playerOne = (turnOne.style.display = "inline") && true;
+                        playerTwo = (turnTwo.style.display = "none") && false;
+                        secondPlayer = 0;
+                        currentTwo.innerText = secondPlayer;
+                    }
+                }
         }; 
+
+
 
 // Fonction Nouvelle Partie demande de choisir un identifiant
 
