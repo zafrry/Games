@@ -71,10 +71,6 @@
         align-items: center;
     }
 
-    .modal.active {
-        display: flex;
-    }
-
     #pop_up {
         background-color: white;
         padding: 5px;
@@ -212,11 +208,11 @@
     .roll_dice, .hold {
         display: flex;
         justify-content: center;
-        padding-bottom: 10px;
     }
 
     .touch {
-        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
         height: 100px;
     }
 
@@ -248,10 +244,6 @@
         align-items: center;
     }
 
-    .end_game.active {
-        display: flex;
-    }
-
     #end_pop {
         background-color: white;
         padding: 5px;
@@ -264,18 +256,221 @@
         align-items: center;
     }
 
-    #fermer {
+    .fermer {
         display: flex;
         background-color: #e66465;
         color: white;
         border-color: #e66465;
         border-radius: 10px;
         font-size: large;
+        margin: 5px;
     }
 
     #end_message {
         padding: 20px;
         font-weight: 900;
         font-size: 30px;
+    }
+
+/* Media Query */
+
+    @media screen and (min-width: 320px) and (max-width : 425px) {
+        .red {
+            height: 487px;
+        }
+        .page {
+            height: 460px;
+            width: 93%;
+            left: 13px;
+            top: 13px;
+        }
+
+        .new_game {
+            padding-top: 20px;
+        }
+
+        .new_game p {
+            font-size: 20px;
+        }
+
+        #nouvelle_partie {
+            font-size: 25px;
+            height: 31px;
+        }
+
+        #players {
+            padding-left: 35px;
+            padding-right: 35px;
+            font-size: 20px;
+        }
+
+        .turn_one, .turn_two {
+            padding-bottom: 3px;
+            height: 13px;
+            width: 20px;
+        }
+
+        .score {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .global {
+            font-size: 20px;
+        }
+
+        #count_one, #count_two {
+            margin-top: 15px;
+            height: 100px;
+            width: 150px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        #dice {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            height: 60px;
+            width: 60px;
+            border-radius: 8px;
+        }
+
+        .points {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .round {
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 90px;
+            width: 90px;
+        }
+
+        .courant {
+            font-size: 20px;
+        }
+
+        .material-symbols-outlined {
+            font-size: 20px;
+        }
+
+        .roll_dice p, .hold p {
+            font-size: 10px; 
+            padding-left: 5px;
+            padding-top: 2px;
+        }
+
+        #btn_hold, #throw {
+            padding-bottom: 20px;
+        }
+
+        .touch {
+            display: flex;
+            flex-direction: column;
+            padding-top: 15px;
+        }
+    }
+
+    @media screen and (min-width: 728px) and (max-width: 1024px) {
+        .red {
+            height: 487px;
+        }
+        .page {
+            height: 460px;
+            width: 96%;
+            left: 13px;
+            top: 13px;
+        }
+
+        .new_game {
+            padding-top: 20px;
+        }
+
+        .new_game p {
+            font-size: 20px;
+        }
+
+        #nouvelle_partie {
+            font-size: 25px;
+            height: 31px;
+        }
+
+        #players {
+            padding-left: 135px;
+            padding-right: 135px;
+            font-size: 30px;
+        }
+
+        .turn_one, .turn_two {
+            padding-bottom: 3px;
+            height: 13px;
+            width: 20px;
+        }
+
+        .score {
+            margin-top: 0px;
+            margin-right: 90px;
+            margin-left: 90px;
+        }
+
+        .global {
+            font-size: 30px;
+        }
+
+        #count_one, #count_two {
+            margin-top: 15px;
+            height: 150px;
+            width: 200px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        #dice {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            height: 100px;
+            width: 100px;
+            border-radius: 13px;
+        }
+
+        .points {
+            margin-top: 30px;
+            margin-right: 120px;
+            margin-left: 120px;
+        }
+
+        .round {
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 120px;
+            width: 120px;
+        }
+
+        .courant {
+            font-size: 30px;
+        }
+
+        .material-symbols-outlined {
+            font-size: 40px;
+        }
+
+        .roll_dice p, .hold p {
+            font-size: 20px; 
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        #btn_hold, #throw {
+            padding-bottom: 20px;
+        }
+
+        .touch {
+            display: flex;
+            flex-direction: column;
+            padding-top: 15px;
+        }
     }
 

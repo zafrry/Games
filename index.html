@@ -39,8 +39,8 @@
 
             <section class="end_game">
                 <div id="end_pop">
-                    <span id="end_message">Le joueur 1 à gagner la partie</span>
-                    <button id="fermer">Fermer</button>
+                    <span id="end_message">Le joueur 1 à gagné la partie</span>
+                    <button class="fermer" onclick="winnerClose()">Rejouer</button>
                 </div>
             </section>
 
@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="hold">
-                        <button class="material-symbols-outlined" onclick="turnPlayers()"> place_item </button>
+                        <button id="btn_hold" class="material-symbols-outlined" onclick="turnPlayers()"> place_item </button>
                         <p>HOLD</p>
                     </div>
 
