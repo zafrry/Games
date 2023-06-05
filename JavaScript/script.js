@@ -137,8 +137,8 @@
     // Créer des pop_up pour ecrire un identifiant
         const modal = document.querySelector('.modal');
 
-        const userOne = document.getElementById('user_one');
-        const userTwo = document.getElementById('user_two');
+        let userOne = 'Joueur 1';
+        let userTwo = 'Joueur 2'
 
         const inputOne = document.getElementById('one');
         const inputTwo = document.getElementById('two');
@@ -148,15 +148,17 @@
         }
         const closePop = () => {
             if (inputOne.value === '' || inputTwo.value === '') {
-                alert(`Vous n'avez pas saisie le nom des joueurs !`) 
+                alert(`Vous n'avez pas saisi le nom des joueurs !`) 
             } else {
                 userOne = inputOne.value;
                 userTwo = inputTwo.value;
             }
-        }   
+            user_one.innerText = userOne;
+            user_two.innerText = userTwo;
 
-            userOne.innerText;
-            userTwo.innerText;
+        }   
+        user_one.innerText = userOne;
+        user_two.innerText = userTwo;
        
     // Validation des identifiants
 
