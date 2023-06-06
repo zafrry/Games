@@ -158,13 +158,3 @@
         }  
         user_one.innerText = userOne;
         user_two.innerText = userTwo;
-
-        
-            
-
-
-
-
-
-
-
