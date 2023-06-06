@@ -96,7 +96,7 @@
             let numbers = Math.floor(numbersDecimal);
             const result = numbers;
             const image = document.getElementById('dice');
-            image.src = 'Des/de_' + result + '.png';
+            image.src = 'Images/de_' + result + '.png';
         // Affiche le résultat dans la case POINTS
             if (playerOne === true) {
                 secondPlayer = 0;
