@@ -140,27 +140,24 @@
         let userOne = 'Joueur 1';
         let userTwo = 'Joueur 2'
 
-        const inputOne = document.getElementById('one');
-        const inputTwo = document.getElementById('two');
-
         const startNewGame = () => {
             modal.style.display = "flex";
         }
         const closePop = () => {
-            if (inputOne.value === '' || inputTwo.value === '') {
+            const inputOne = document.getElementById('one').value;
+            const inputTwo = document.getElementById('two').value;
+            if (inputOne === '' || inputTwo === '') {
                 alert(`Vous n'avez pas saisi le nom des joueurs !`) 
             } else {
-                userOne = inputOne.value;
-                userTwo = inputTwo.value;
+                userOne = inputOne;
+                userTwo = inputTwo;
+                modal.style.display = "none";
             }
             user_one.innerText = userOne;
             user_two.innerText = userTwo;
-
-        }   
+        }  
         user_one.innerText = userOne;
         user_two.innerText = userTwo;
-       
-    // Validation des identifiants
 
         
             
